@@ -1,0 +1,239 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fff2e5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: #43a047;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F19447; /* Customize your header background color */
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a{
+    color: white;
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    margin-left: 20px;
+    width: 300px;
+    border-radius: 30px ;
+}
+
+.logo a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+
+.logo img{
+    height: 28px;
+    width: auto;
+    padding: 0 10px
+}
+
+main{
+    padding: 6rem 2rem;
+    align-content: center;
+}
+
+/* Hero Section */
+.hero {
+    margin-right: 250px;
+    margin-left: 250px;
+    text-align: center;
+    background-color: #fff2e5;
+    padding: 50px 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1fr for image, 2fr for text */
+    align-items: center; /* Aligns content vertically */
+    gap: 20px; /* Space between grid items */
+}
+
+.hero img {
+    width: 30vw;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.hero-text {
+    text-align: left; /* Ensures the text is aligned to the left */
+}
+
+.hero-text h1 {
+    color: #e04f30;
+}
+
+.hero-text p {
+    color: black;
+    font-size: 1.2rem;
+    line-height: 1.2;
+}
+
+.hero-text button {
+    margin-top: 20px;
+    border-radius: 30px;
+    height: 50px;
+    width: 200px;
+}
+
+
+/* About Us Section */
+.about-us {
+    padding: 8rem 50px 10rem 50px ;
+    text-align: center;
+    width: 100%
+}
+
+.about-us h2 {
+    color: #d97c30;
+}
+
+/*.about-us p {
+    width: 50%;
+    margin: 0 12rem;
+    text-align: left;
+    color: black;
+}*/
+
+.about-us p {
+    display: block; /* Flex isn't necessary for this centering */
+    text-align: left;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto; /* Centers the paragraph on the screen */
+}
+
+
+/* Contact Section */
+.contact {
+    display: flex;
+    justify-content: center; /* Centering the form within the orange box */
+    padding: 30px;
+    background-color: #f9c290;
+    border-radius: 15px;
+    width: 450px; /* Fixed width for the orange box */
+    height: 300px; /* Fixed height for the orange box */
+    margin: 0 auto; /* Centering the orange box horizontally */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 350px; /* Fixed width for the form */
+    height: 100%; /* The form will take up all available height of the orange box */
+}
+
+h3 {
+   text-align: center; 
+}
+
+.contact-form input, .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form textarea {
+    height: 140px;
+}
+
+.contact-form button {
+    background-color: #F5A460;
+    color: white;
+    box-shadow: 0 1px 1px #6c6c6c;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #f4955e; /* Adjust to match the exact color */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center text in each section */
+    font-size: 1.2rem;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 10px; /* Adds some padding for space between sections */
+}
+
+.footer-section p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6; /* Adjust line height (1.6 times the font size) */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
