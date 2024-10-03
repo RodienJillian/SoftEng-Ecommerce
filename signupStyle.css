@@ -1,0 +1,160 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fff2e5;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: #43a047;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F19447; /* Customize your header background color */
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0 30px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a{
+    color: white;
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    margin-left: 20px;
+    width: 300px;
+    border-radius: 30px ;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+div.logo{
+    padding:0 30px;
+}
+
+.logo a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+    padding-right: 30px;
+}
+
+.logo img{
+    height: 28px;
+    width: auto;
+    padding: 0 10px
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 90px;
+}
+
+.login-box {
+    background-color: #fbc399;
+    padding: 80px 180px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.first-color {
+    color: #505631; /* First color */
+}
+
+.second-color {
+    color: #DE6E27; /* Second color */
+}
+
+
+
+.login-box input[type="email"],
+.login-box input[type="password"] {
+    width: 85%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-box button {
+    background-color: #466A3F;
+    color: white;
+    padding: 10px;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.login-box button:hover {
+    background-color: #3A5535;
+}
+
+.login-box a {
+    text-decoration: none;
+    color: #000000;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
