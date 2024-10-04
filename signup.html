@@ -6,7 +6,7 @@
     <title>Cuddle Paws Login</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="signupStyle.css">
-    <!-- <link rel="stylesheet" href="header.css"> -->
+    <link rel="stylesheet" href="header.css">
 
 </head>
 <body>
@@ -14,10 +14,10 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="shop1.html">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
                 <li><a href="index.html/#about-us">About</a></li>
-                <li><a href="#">Log In/Sign Up</a></li>
+                <li><a href="#" id="login-signup-btn">Log In/Sign Up</a></li>
             </ul>
             <input type="text" placeholder="🔍 Search">
             <div class="logo">
@@ -27,6 +27,7 @@
         </nav>
     </header>
 
+    <main>
     <div class="login-container">
         <div class="login-box">
             <h1>
@@ -41,6 +42,18 @@
             <a href="signup2.html">Create Account</a>
         </div>
     </div>
+    </main>
+
+    <!-- Log In/Sign Up Modal -->
+    <div id="login-signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Choose an option</h2>
+            <button id="login-btn">Log In</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
 
 </body>
 </html>
