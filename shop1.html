@@ -15,9 +15,9 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#">Shop</a></li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#about-us">About</a></li>
-                <li><a href="#">Log In/Sign Up</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="/index.html/#about-us">About</a></li>
+                <li><a href="#" id="login-signup-btn">Log In/Sign Up</a></li>
             </ul>
             <input type="text" placeholder="🔍 Search">
             <div class="logo">
@@ -27,6 +27,7 @@
         </nav>
     </header>
 
+    <main>
     <div class="pawsbutton">
         <div class="dog-dropdown">
             <label for="btn-1" class="button">Dog<span class="material-symbols-outlined">keyboard_arrow_down</span><label>
@@ -51,5 +52,20 @@
                 <li><a href="#">Cat Accessories</a></li>
             </ul>
         </div>
+    </div>
+    </main>
+
+    <!-- Log In/Sign Up Modal -->
+    <div id="login-signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Choose an option</h2>
+            <button id="login-btn">Log In</button>
+            <button id="signup-btn">Sign Up</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+
 </body>
 </html>
