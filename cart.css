@@ -28,28 +28,28 @@ h1 {
 
 .cart-table th, .cart-table td {
     padding: 10px;
-    text-align: center; /* Change to left for header cells if needed */
     border-bottom: 1px solid #ccc;
-    vertical-align: middle; /* Vertically align the content in the center */
+    vertical-align: middle; 
+    width: auto; 
 }
 
-.cart-table thead {
-    background-color: #f9c290; /* Set the background color for the entire header */
+.cart-table thead tr {
+    background-color: #faa85a;
 }
 
 .cart-table th {
     color: white;
-    padding: 10px; /* Adjust padding if needed */
-    border: none; /* Remove borders if present */
-    border-bottom: 1px solid #ccc; /* Add a border to the bottom */
-    vertical-align: middle; /* Ensures the header content is aligned to the middle */
+    padding: 10px; 
+    border: none; 
+    border-bottom: 1px solid #ccc; 
+    vertical-align: middle; 
 }
 
 img.delete {
     cursor: pointer;
-    vertical-align: middle; /* Aligns trash can icon to the middle */
-    height: 24px!important;  /* Set desired height */
-    width: auto!important;   /* Set desired width */
+    vertical-align: middle; 
+    height: 24px!important;  
+    width: auto!important;   
 }
 
 
@@ -65,6 +65,7 @@ img.delete {
     height: auto;
     border-radius: 8px;
     margin-right: 10px;
+    padding: 0 20px;
 }
 
 .cart-table input[type="number"] {
@@ -75,30 +76,75 @@ img.delete {
 /* Checkout Section */
 .checkout-section {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-end; /* Align items to the right */
+    flex-direction: column; 
+    align-items: flex-end; 
     margin-top: 20px;
     padding: 15px;
     border-radius: 10px;
-    width: calc(100% - 4rem); /* Adjust this value if your main section has padding */
-    margin-left: 2rem; /* Match this with the padding of the main content */
-    margin-right: 2rem; /* Match this with the padding of the main content */
+    width: calc(100% - 4rem); 
+    margin-left: 2rem; 
+    margin-right: 2rem; 
 }
 
 .total-price {
     display: flex;
-    padding: 30px 60px;
-    flex-direction: column; /* Stack the total price text vertically */
-    align-items: flex-end; /* Align items to the end (right) */
+    padding: 30px 35px;
+    flex-direction: row;
+    align-items: flex-end; 
 }
 
 .total-price span {
     font-size: 1.5rem;
     font-weight: bold;
+    padding: 0 5px;
 }
 
 .checkout-btn {
     width: 15rem;
     height: auto;
     cursor: pointer;
+    transition: filter 0.3s ease, transform 0.3s ease; 
 }
+
+.checkout-btn:hover {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(255, 255, 255, 0.5)); 
+    transform: scale(1.05); 
+}
+
+/* Counter Styles */
+.cart-table td.quantity {
+    text-align: center; 
+    vertical-align: middle; 
+    padding: 10px; 
+}
+
+/* Counter Styles */
+.counter-container {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #d4cb5d; 
+    padding: 5px;
+    width: 80px;
+    text-align: center;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 5px;
+    font-weight: bold;
+}
+
+.number {
+    font-size: 14px;
+    margin: 0 10px;
+    text-align: center;
+    width: 20px;
+    font-weight: bold;
+}
+  
