@@ -184,7 +184,7 @@ input[type="text"] {
     border-bottom: 1px solid black;
 }
 .purchase-item{
-        border-bottom: 1px solid black;
+    border-bottom: 1px solid black;
 }
 .purchase-item img {
     width: 100px;
@@ -196,7 +196,7 @@ input[type="text"] {
 
 .purchase-item p{
     margin-left: 200px;
-    margin-top: -34px;
+    margin-top: -40px;
 }
 
 .payment-details h2{
