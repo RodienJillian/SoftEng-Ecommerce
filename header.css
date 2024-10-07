@@ -44,8 +44,11 @@ nav ul li {
 
 nav ul li a{
     color: white;
-    font-size: 18px;
-    
+    font-size: 18px;  
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 5px rgb(248, 241, 116), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 nav input[type="text"] {
