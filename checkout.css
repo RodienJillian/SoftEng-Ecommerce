@@ -1,0 +1,267 @@
+html {
+    overflow-y: scroll;
+}
+
+
+body, main {
+    /* font-family: 'Arial', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fff2e5;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    background-color: #43a047;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F19447; /* Customize your header background color */
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0 30px;
+    font-size: 20px;
+
+}
+
+nav ul li {
+    margin-left: 20px;
+    gap: 10px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;  
+}
+
+nav ul li a:hover {
+    text-shadow: 0 0 5px rgb(248, 241, 116), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    margin-left: 20px;
+    width: 300px;
+    border-radius: 30px ;
+    font-size: 16px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+.logo{
+    display: flex;
+    padding:0 30px;
+    margin-right:20px;
+}
+
+.logo a {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+    padding-right: 30px;
+    text-align: center;
+    line-height: 30px;
+    
+}
+
+.logo img{
+    height: 28px;
+    width: auto;
+    padding: 0 10px;
+    
+}
+
+/* Checkout Title */
+h1 {
+    font-size: 2rem;
+    color: #cb6527;
+    margin-bottom: 0px;
+    padding: 60px 0;
+    margin-top: 50px;
+    text-align: center;
+    margin-right: 900px;
+}
+
+/* Delivery Address Section */
+
+.delivery-address {
+    background-color: #f0b98c;
+    padding: 40px;
+    border-radius: 5px;
+    width: 45%;
+    margin-left: 30px;
+    /* margin-bottom: 20px; */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+.delivery-address h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;    
+}
+
+.delivery-address form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input#full-name[type="text"] {
+    width: 45%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+input[type="tel"] {
+    width: 38%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    margin-top: -55px;
+    margin-left: 290px;
+}
+input[type="text"] {
+    width: 89%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Purchase Details Section */
+.purchase-details {
+    background-color: #e1da92;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 370px;
+    height: 415px;
+    margin-left: 58%; 
+    margin-top: -342px;  
+    margin-bottom: 100px;
+}
+
+.purchase-details h2 {
+    border-bottom: 1px solid black;
+}
+.purchase-item{
+        border-bottom: 1px solid black;
+}
+.purchase-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 30px;
+    margin-left: 30px;  
+    border-radius: 5px;
+}
+
+.purchase-item p{
+    margin-left: 200px;
+    margin-top: -34px;
+}
+
+.payment-details h2{
+    margin-top: 60px;
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: lighter;
+    border-bottom: none;
+}
+
+.payment-item {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Create two columns: one for labels, one for prices */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.payment-item span {
+    padding: 5px 0;
+}
+
+.shipping-payment {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Create two columns: one for labels, one for prices */
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid black;
+}
+
+.shipping-payment span {
+    padding: 5px 0;
+}
+.payment-item.total span {
+    font-weight: bold; /* Make the total bold */
+    font-size: 1.2rem;
+}
+
+.payment-item span:nth-child(2) {
+    text-align: right; /* Align the price to the right */
+}
+
+
+button.place-order {
+    font-family: 'League Spartan', sans-serif;
+    background-color: #4D6C40;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 27px;
+    cursor: pointer;
+    width: 85%;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid black;
+}
+
+button.place-order:hover {
+    background-color: #388e3c;
+}
+.under-button-line {
+    border: 0;
+    height: 2px;
+    background-color:rgba(0, 0, 0, 0.4);
+    margin-top: 0px;
+    width: 100%;
+    margin-left: 1px;
+}
+
