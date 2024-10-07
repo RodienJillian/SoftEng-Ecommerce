@@ -3,7 +3,7 @@ html {
 }
 
 body, main {
-    min-height: 100vh; 
+    min-height: 100vh; /* 100% of the viewport height */
 }
 
 /* Header Styles */
@@ -12,11 +12,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F19447;
+    background-color: #F19447; /* Customize your header background color */
     padding: 20px;
     text-align: center;
-    z-index: 1000; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
 }
 
 nav {
@@ -24,26 +24,28 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin: 0;
     padding: 0 30px;
+    font-size: 20px;
+
 }
 
 nav ul li {
-    margin: 0;
+    margin-left: 20px;
+    gap: 10px;
 }
 
 nav ul li a{
     color: white;
-}
-
-nav ul li a:hover {
-    text-shadow: 0 0 5px rgb(248, 241, 116), 0 0 10px rgba(255, 255, 255, 0.6), 0 0 15px rgba(255, 255, 255, 0.4);
+    font-size: 18px;
+    
 }
 
 nav input[type="text"] {
@@ -51,15 +53,20 @@ nav input[type="text"] {
     margin-left: 20px;
     width: 300px;
     border-radius: 30px ;
+    font-size: 16px;
+    
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    
 }
 
-div.logo{
+.logo{
+    display: flex;
     padding:0 30px;
+    margin-right:20px;
 }
 
 .logo a {
@@ -67,10 +74,14 @@ div.logo{
     color: #fff;
     font-size: 1.5em;
     padding-right: 30px;
+    text-align: center;
+    line-height: 30px;
+    
 }
 
 .logo img{
     height: 28px;
     width: auto;
-    padding: 0 10px
+    padding: 0 10px;
+    
 }
