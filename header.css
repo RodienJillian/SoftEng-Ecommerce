@@ -57,7 +57,8 @@ nav input[type="text"] {
     width: 300px;
     border-radius: 30px ;
     font-size: 16px;
-    
+    border: 2px solid lightgray; /* Light gray border */
+    outline: none;
 }
 
 a {
