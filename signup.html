@@ -36,12 +36,19 @@
             </h1>            
             <form action="">
                 <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <span class="toggle-password" onclick="togglePassword()">
+                        <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1728356362/eye_ie4zen.png" alt="Show/Hide Password" id="password-icon">
+                    </span>
+                </div>
                 <button type="submit">Sign in</button>
             </form>
             <a href="signup2.html">Create Account</a>
         </div>
     </div>
     </main>
+
+    <script src="loginpassw.js"></script>
 </body>
 </html>
