@@ -1,6 +1,6 @@
 body {
     font-family: 'League Spartan', sans-serif;
-    background-color: #f9e0d2;
+    background-color: #FFF0D8;
     margin: 0;
     padding: 0;
 }
@@ -53,21 +53,22 @@ main {
 }
 
 .food-category {
-    padding: 40px;
+    padding: 20px;
 }
 
 .food-category h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #d97c30;
+    
 }
 
 /* Always 5 columns */
 .food-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* Exactly 5 columns */
-    gap: 20px;
-    height: 250px
+    gap: 50px;
+    height: 100px;
 }
 
 .food-card {
@@ -77,7 +78,7 @@ main {
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     height: 90%;
-    width: 80%; /* Make the card fit its column */
+    width: 100%; /* Make the card fit its column */
     
     display: flex;
     flex-direction: column;
@@ -87,7 +88,7 @@ main {
 .food-card img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    
 }
 
 .food-card h3 {

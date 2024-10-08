@@ -1,4 +1,3 @@
-/* General Styles */
 html {
     scroll-behavior: smooth;
 }
@@ -9,69 +8,122 @@ body {
     box-sizing: border-box;
     color: #333;
     font-family: 'League Spartan', sans-serif;
-    background-color: #fff2e5;
+    background-color: #FFF0D8;
     overflow-x: hidden;
 }
-.pawsbutton {
-    display: flex;  
-    align-items: center;
-    margin: 100px;
-    gap:30px;
-    font-family: auto;
-}
-.dog-dropdown, .cat-dropdown {
-    background: #DE6E27;
-    width: 200px;
-    padding: 10px;
-    border-radius: 10px;
-    position: relative;
-}
-.dog-dropdown label, .cat-dropdown label{
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    display: block;
-    cursor: pointer;
-    text-align: center;
-    line-height: 35px;
 
+.CuddlePaws-btn{
+    padding: 20px;
+
+  /* Make the container 80% of the viewport width */
+    margin: 5rem auto; /* Center the container */
 }
-.button span{
-    float: right;
-    line-height: 35px;
-}
-.dog-dropdown ul, .cat-dropdown ul{
-    line-height: 40px;
-    position: absolute;
-    background-color: #fff2e5;
-    list-style: none;
-    top: 40px;
-    left:0;
+
+
+.category-dropdown {
     padding:10px;
-    width: 200px;
-    border-radius: 10px;
-    display: block;
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+   
 }
-.dog-dropdown .menu:before, .cat-dropdown .menu:before {
-    position: absolute;
-    content: '';
-    height: 20px;
-    width: 20px;
-    background-color: #fff2e5;
-    right: 20px;
-    top: -10px;
-    transform: rotate(45deg);
-    z-index: -1;
-}
-.dog-dropdown ul li, .cat-dropdown ul li{
-    line-height: 40px;
-    padding: 8px 20px;
+
+.category-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #d67d3e; /* Active category color */
+    color: white;
     cursor: pointer;
-    border-bottom: 1px solid rgba(0,0,0,0.3);
+    width: 200px;
 }
-.dog-dropdown ul li a, .cat-dropdown ul li a{
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
+
+.category-list {
+    display: none; /* Hide the list by default */
+    position: absolute;
+    background-color: #ffe5d6;
+    
+    border-radius: 5px;
+    margin-top: 5px; /* Space between the button and the list */
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Padding for the list */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
+    z-index: 100; /* Ensure it appears above other content */
+}
+
+.category-item {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.category-item:hover {
+    background-color: #d0bd87;
+    color:#ffffff;
+}
+.pets-category {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 30px;
+    margin: 50px;
+}
+
+.pets-category > div {
+    box-shadow: 0 5px 7px rgba(0, 0, 0,0.5);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure images do not overflow */
+}
+
+.pets-category img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Makes the image cover the entire area without distorting the aspect ratio */
+}
+
+.bestSeller {
+    grid-column: 1;
+    grid-row: 1/3;
+    background-color: #bba267;
+}
+
+.dog {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.cat {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.fish {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.birds {
+    grid-column: 3;
+    grid-row: 1;
+}
+.viewbtn >div {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 0 20px;
+    width: 80%;
+}
+
+.view-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #d67d3e;
+    
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
 }
