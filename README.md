@@ -1,5 +1,7 @@
 # SoftEng-Ecommerce
 
-https://www.figma.com/design/PzyAyRaYvVIJS3naJ8ir9n/SoftEng?node-id=0-1&node-type=canvas&t=D8BcDgdkPMB2mXfs-0
+Figma: https://www.figma.com/design/PzyAyRaYvVIJS3naJ8ir9n/SoftEng?node-id=0-1&node-type=canvas&t=D8BcDgdkPMB2mXfs-0
 
-[Cuddle Paws](https://rodienjillian.github.io/SoftEng-Ecommerce/)
+Deployed Link: https://rodienjillian.github.io/SoftEng-Ecommerce/
+
+Data Dictionaru: https://docs.google.com/document/d/1jqgWDgl8bYcncLnvTooWo01a-c83Lg-xRxInjrDqM6E/edit?usp=sharing
