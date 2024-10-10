@@ -29,20 +29,20 @@ main{
 /* Hero Section */
 .hero {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* 1fr for the image, 2fr for the text */
+    grid-template-columns: 1fr 2fr; 
     align-items: center;
-    gap: 40px; /* Increased gap between the image and text */
+    gap: 40px; 
     padding: 50px;
     margin: 0 auto;
     width: 80%;
 }
 
 .hero img {
-    width: 400px; /* Set a fixed width for the image */
-    height: auto; /* Set a fixed height for the image to make it larger */
-    border-radius: 50%; /* Keep the circular shape */
+    width: 400px; 
+    height: auto; 
+    border-radius: 50%; 
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-    object-fit: cover; /* Ensures the image fits the set width/height without distortion */
+    object-fit: cover; 
 }
 
 
@@ -91,32 +91,32 @@ main{
 }
 
 .about-us p {
-    display: block; /* Flex isn't necessary for this centering */
+    display: block; 
     text-align: left;
     line-height: 1.5;
     font-size: 1.2rem;
     max-width: 700px;
-    margin: 0 auto; /* Centers the paragraph on the screen */
+    margin: 0 auto; 
 }
 
 
 /* Contact Section */
 .contact {
     display: flex;
-    justify-content: center; /* Centering the form within the orange box */
+    justify-content: center; 
     padding: 30px;
     background-color: #f9c290;
     border-radius: 15px;
-    width: 450px; /* Fixed width for the orange box */
-    height: 300px; /* Fixed height for the orange box */
-    margin: 0 auto; /* Centering the orange box horizontally */
+    width: 450px; 
+    height: 300px; 
+    margin: 0 auto; 
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
-    width: 350px; /* Fixed width for the form */
-    height: 100%; /* The form will take up all available height of the orange box */
+    width: 350px; 
+    height: 100%; 
 }
 
 h3 {
@@ -144,7 +144,7 @@ h3 {
 
 /* Footer */
 footer {
-    background-color: #f4955e; /* Adjust to match the exact color */
+    background-color: #f4955e; 
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -153,24 +153,24 @@ footer {
 
 .footer-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+    justify-content: center; 
+    align-items: center;     
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center; /* Center text in each section */
+    text-align: center; 
     font-size: 1.2rem;
 }
 
 .footer-section {
     flex: 1;
-    padding: 0 10px; /* Adds some padding for space between sections */
+    padding: 0 10px; 
 }
 
 .footer-section p {
     margin: 0;
     font-size: 14px;
-    line-height: 1.6; /* Adjust line height (1.6 times the font size) */
+    line-height: 1.6; 
 }
 
 .footer-bottom {
