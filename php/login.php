@@ -48,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuddle Paws Login</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="loginStyle.css">
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
     <header>
@@ -100,6 +100,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     </main>
 
-    <script src="loginpassw.js"></script>
+    <script src="js/loginpassw.js"></script>
 </body>
 </html>
