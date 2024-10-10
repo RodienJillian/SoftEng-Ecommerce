@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuddle Paws</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop1.html">Shop</a></li>
                 <li><a href="cart.html">Cart</a></li>
                 <li><a href="#about-us">About</a></li>
-                <li><a href="signup.html">Log In/Sign Up</a></li>
+                <li><a href="php/login.php">Log In/Sign Up</a></li>
             </ul>
             <input type="text" placeholder="🔍 Search">
             <div class="logo">
