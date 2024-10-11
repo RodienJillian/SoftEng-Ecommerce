@@ -96,16 +96,11 @@ a {
 /* FOR ALERT */
 .alert {
     color: red;
-    background-color: #f8d7da;
     padding: 10px;
-    border: 1px solid #f5c6cb;
     margin: 15px 0;
-    border-radius: 5px;
 }
 .alert.success {
     color: green;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
 }
 
 /* FOR MESSAGE */
