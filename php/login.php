@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <button type="submit">Log In</button> 
             </form>
-            <a href="signup2.html">Don't have an account? Sign up</a>
+            <a href="signup.php">Don't have an account? Sign up</a>
         </div>
     </div>
     </main>
