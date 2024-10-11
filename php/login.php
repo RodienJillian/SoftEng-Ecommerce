@@ -4,8 +4,8 @@ session_start();
 $alert_message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    $email = isset($_POST['Email']) ? $_POST['Email'] : '';
+    $password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
     if (empty($email) || empty($password)) {
         $alert_message = "Both fields are required.";
@@ -26,12 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
-
+            echo "Stored Password: " . $user['Password'];  // This should be a long hashed string
             if (password_verify($password, $user['Password'])) {
                 $alert_message = "Login successful! Welcome, " . htmlspecialchars($user['Username']);
             } else {
                 $alert_message = "Incorrect password.";
             }
+        
         } else {
             $alert_message = "No account found with that email.";
         }
@@ -48,23 +49,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuddle Paws Login</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/loginStyle.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.php">Home</a></li>
                 <li><a href="shop1.html">Shop</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li><a href="index.html#about-us">About</a></li>
+                <li><a href="index.php#about-us">About</a></li>
                 <li><a href="login.php">Log In/Sign Up</a></li>
             </ul>
             <input type="text" placeholder="🔍 Search">
             <div class="logo">
                 <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" alt="Hero Image">
-                <a href="index.html">Cuddle Paws</a>
+                <a href="index.php">Cuddle Paws</a>
             </div>
         </nav>
     </header>
@@ -85,10 +86,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
 
             <!-- Sign Up Form -->
-            <form action="" method="post"> <!-- Submit to the same page -->
-                <input type="email" name="email" placeholder="Email" required>
+            <form action="" method="post"> 
+                <input type="email" name="Email" placeholder="Email" required>
                 <div class="password-container">
-                    <input type="password" id="password" name="password" placeholder="Password" required>
+                    <input type="password" id="password" name="Password" placeholder="Password" required>
                     <span class="toggle-password" onclick="togglePassword()">
                         <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1728356362/eye_ie4zen.png" alt="Show/Hide Password" id="password-icon">
                     </span>
