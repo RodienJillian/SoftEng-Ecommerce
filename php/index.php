@@ -1,26 +1,3 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $messageText = htmlspecialchars($_POST['message']);
-
-    if (!empty($name) && !empty($email) && !empty($messageText)) {
-        $to = "jillianellorando@gmail.com"; // Company's email address
-        $subject = "New Contact Form Submission from $name";
-        $body = "You have received a new message from $name ($email):\n\n" . $messageText;
-        $headers = "From: " . $email;
-
-        if (mail($to, $subject, $body, $headers)) {
-            $message = "<p class='message success'>Thank you for reaching out! Your message has been sent successfully.</p>";
-        } else {
-            $message = "<p class='message error'>Sorry, something went wrong. Please try again later.</p>"; // Change class here if needed
-        }
-    } else {
-        $message = "<p class='message error'>Please fill in all fields before submitting.</p>"; // Change class here if needed
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,18 +55,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h3>Get in Touch</h3>
         <section class="contact">
             <div class="contact-form">
-                <form action="" method="POST">
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="6a0b79db-6e16-40a5-9848-a2c9ae29c11a">
                     <input type="text" name="name" placeholder="Full Name" required>
                     <input type="email" name="email" placeholder="Email" required>
                     <textarea name="message" placeholder="Message" required></textarea>
                     <button type="submit">Submit</button>
                 </form>
-
-                <?php if (!empty($message)): ?>
-                    <div class="message"><?php echo $message; ?></div>
-                <?php endif; ?>
             </div>
         </section>
+
     </main>
     
     <footer>
