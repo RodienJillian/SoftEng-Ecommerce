@@ -1,0 +1,205 @@
+html {
+    overflow-y: scroll;
+}
+
+
+body, main {
+    /* font-family: 'Arial', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fff2e5;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F19447; /* Customize your header background color */
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+.logo{
+    display: flex;
+    padding:0 30px;
+    margin-right: 20px;
+}
+
+.logo a {
+    margin-top: 3px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+    padding-right: 30px;
+    text-align: center;
+    line-height: 30px;
+    
+}
+
+.logo img{
+    height: 28px;
+    width: auto;
+    padding: 0 10px;
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-top: 100px;
+    
+}
+
+.paw-logo {
+    width: 40px; /* Adjust the size of the paw logo */
+    height: auto;
+    margin-right: 10px; /* Spacing between the logo and text */
+}
+.logo-text {
+    margin-top: 8px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #505631; /* Customize the color of the logo text */
+}
+
+.logo-text span {
+    color: #DE6E27; /* Customize the color for 'Paws' */
+}
+
+/* Container */
+.container {
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #F8D69B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Move the list downwards */
+.sidebar ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 65px; /* Adjust this value to move the items further down */
+}
+
+.sidebar ul li {
+    margin-bottom: 40px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #5A4A42;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+/* Dashboard */
+.dashboard {
+    flex: 1;
+    padding: 30px;
+    background-color: #FFF0D8;
+    padding-top: 100px; /* Adds space at the top so the h1 is visible */
+}
+
+.dashboard h1 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FAD6A5;
+    padding: 40px;
+    text-align: left;
+    border-radius: 10px;
+    font-weight: lighter;
+}
+
+.registered-users {
+    background-color: #F9C290;
+}
+
+.orders {
+    background-color: #D7CD63;
+}
+
+.products-sold {
+    background-color: #D7CD63;
+}
+
+.card h2 {
+    font-weight: lighter;
+    font-size: 3em;
+    margin: 0;
+}
+.card p{
+    font-size: 30px;
+}
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #F8D69B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: width 0.3s ease; 
+}
+
+.sidebar-toggle {
+    background-color: transparent;
+    border: none;
+    color: #5A4A42;
+    font-size: 2em;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: absolute;  
+    top: 80px; 
+    left: 250px;
+    transition: left 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    color: #F19447;
+}
+.sidebar.collapsed .sidebar-toggle {
+    left: 60px;
+}
+.sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .logo-container,
+.sidebar.collapsed ul {
+    display: none; 
+}
