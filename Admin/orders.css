@@ -157,9 +157,9 @@ header {
     margin-bottom: 20px;
 }
 .products-header {
+
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     background: #FFCBA0;
 }
 
@@ -167,7 +167,6 @@ header {
     color: #DE6E27;
     font-size: 2em;
     font-weight: 700;
-    margin-left: 45px;
 }
 
 /* Orders Table */
