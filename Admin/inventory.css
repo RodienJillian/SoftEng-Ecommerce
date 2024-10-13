@@ -1,0 +1,211 @@
+html {
+    overflow-y: scroll;
+}
+
+
+body, main {
+    /* font-family: 'Arial', sans-serif; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-family: 'League Spartan', sans-serif;
+    background-color: #fff2e5;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #F19447; /* Customize your header background color */
+    padding: 20px;
+    text-align: center;
+    z-index: 1000; /* Ensures the header stays on top of other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+.logo{
+    display: flex;
+    padding:0 30px;
+    margin-right: 20px;
+}
+
+.logo a {
+    margin-top: 3px;
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.5em;
+    padding-right: 30px;
+    text-align: center;
+    line-height: 30px;
+    
+}
+
+.logo img{
+    height: 28px;
+    width: auto;
+    padding: 0 10px;
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-top: 100px;
+    
+}
+
+.paw-logo {
+    width: 40px; /* Adjust the size of the paw logo */
+    height: auto;
+    margin-right: 10px; /* Spacing between the logo and text */
+}
+.logo-text {
+    margin-top: 8px;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: #505631; /* Customize the color of the logo text */
+}
+
+.logo-text span {
+    color: #DE6E27; /* Customize the color for 'Paws' */
+}
+
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+}
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #F8D69B;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: width 0.3s ease; 
+}
+/* Move the list downwards */
+.sidebar ul {
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 65px; /* Adjust this value to move the items further down */
+}
+
+.sidebar ul li {
+    margin-bottom: 40px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #5A4A42;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.sidebar-toggle {
+    background-color: transparent;
+    border: none;
+    color: #5A4A42;
+    font-size: 2em;
+    cursor: pointer;
+    margin-bottom: 20px;
+    position: absolute;  
+    top: 80px; 
+    left: 250px;
+    transition: left 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    color: #F19447;
+}
+.sidebar.collapsed .sidebar-toggle {
+    left: 60px;
+}
+.sidebar.collapsed {
+    width: 60px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .logo-container,
+.sidebar.collapsed ul {
+    display: none; 
+}
+
+.inventory {
+    flex: 1;
+    padding: 30px;
+    background-color: #FFF0D8;
+    padding-top: 100px; /* Adds space at the top so the h1 is visible */
+}
+
+.inventory h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FFCBA0;
+}
+
+.products-header h2 {
+    color: #DE6E27;
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 45px;
+}
+
+.add-product-btn {
+    margin-right: 40px;
+    background-color: #5A754D;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.add-product-btn:hover {
+    background-color: #4a6342;
+}
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse; /* Merge border spacing */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for the table */
+}
+
+
+.inventory-table th,
+.inventory-table td {
+    border: 1px solid #ddd; /* Add a border around the cells */
+    padding: 8px; /* Optional: Add some padding for better spacing */
+}
+
+.inventory-table th {
+    background-color: #f2f2f2; /* Optional: Add a background color to the headers */
+    text-align: left; /* Align text in the header cells */
+}
+
+.inventory-table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.inventory-table td {
+    background-color: #fff; /* Cell background color */
+    color: #333; /* Cell text color */
+}
