@@ -4,10 +4,10 @@ session_start();
 $alert_message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = isset($_POST['Email']) ? $_POST['Email'] : '';
+    $username = isset($_POST['Username']) ? $_POST['Username'] : '';
     $password = isset($_POST['Password']) ? $_POST['Password'] : '';
 
-    if (empty($email) || empty($password)) {
+    if (empty($) || empty($password)) {
         $alert_message = "Both fields are required.";
     } else {
         $servername = "localhost";
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT * FROM users WHERE Email='$email'";
+        $sql = "SELECT * FROM users WHERE Username='$username'";
         $result = $conn->query($sql);
 
         if ($result->num_rows > 0) {
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         
         } else {
-            $alert_message = "No account found with that email.";
+            $alert_message = "No account found.";
         }
 
         $conn->close();
@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <!-- Sign Up Form -->
             <form action="" method="post"> 
-                <input type="email" name="Email" placeholder="Email" required>
+                <input type="text" name="Username" placeholder="Username" required>
                 <div class="password-container">
                     <input type="password" id="password" name="Password" placeholder="Password" required>
                     <span class="toggle-password" onclick="togglePassword()">
