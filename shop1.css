@@ -9,26 +9,23 @@ body {
     color: #333;
     font-family: 'League Spartan', sans-serif;
     background-color: #FFF0D8;
-   
 }
-main{
-    padding: 10px;
+
+main {
+    padding: 20px;
     align-content: center;
 }
-.CuddlePaws{
+
+.CuddlePaws {
     padding: 20px;
     margin: 5rem auto;
-    margin-bottom: 10%;
-
 }
 
-
 .category-dropdown {
-    padding:10px;
     position: relative;
     display: inline-block;
-    justify-content: center;
-   
+    margin-left:20px;
+    
 }
 
 .category-button {
@@ -36,34 +33,52 @@ main{
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #d67d3e; 
+    background-color: #d67d3e;
     color: white;
     cursor: pointer;
     width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.category-button:hover {
+    background-color: #c5682e;
 }
 
 .category-list {
-    display: none; /* Hide the list by default */
+    display: none;
     position: absolute;
     background-color: #ffe5d6;
-    
     border-radius: 5px;
-    margin-top: 5px; /* Space between the button and the list */
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Padding for the list */
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
     box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
-    z-index: 100; /* Ensure it appears above other content */
+    z-index: 100;
+    transition: 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+.category-list[aria-hidden="false"] {
+    display: block;
+    max-height: 500px; /* Adjust based on the number of items */
 }
 
-.category-item {
-    padding: 10px 20px;
-    cursor: pointer;
+.category-list li {
+    padding: 10px;
 }
 
-.category-item:hover {
+.category-list li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.category-list li:hover {
     background-color: #d0bd87;
-    color:#ffffff;
+    color: #ffffff;
 }
+
 .pets-category {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,12 +88,13 @@ main{
 }
 
 .pets-category > div {
-    box-shadow: 0 5px 7px rgba(0, 0, 0,0.5);
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden; 
+    cursor: pointer;
 }
 
 .pets-category img {
@@ -89,7 +105,7 @@ main{
 
 .bestSeller {
     grid-column: 1;
-    grid-row: 1/3;
+    grid-row: 1 / 3;
     background-color: #bba267;
 }
 
@@ -112,41 +128,61 @@ main{
     grid-column: 3;
     grid-row: 1;
 }
-.Shop_Dog{
-    padding: 20px;    
+.products{
+    margin-top:10%;
 }
-.Shop_Dog h2{
-    color:#d67d3e;
+
+.Shop_Dog, .shop_Cat {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    background-color:  #ffe5b5 /* Adds space between sections */
+}
+
+.Shop_Dog h2, .shop_Cat h2 {
+    color: #d67d3e;
     font-size: 24px;
     padding: 20px;
 }
-.shopDog{
+
+.shopDog, .ShopCat {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 50px;
-    height: 100px;
+    gap: 30px;
+    padding: 30px;
+    margin:20px;
+    cursor: pointer;
 }
-.allItems-Card{
-    background-color: #ffdfc4;
+
+.allItems-Card {
+    background-color: #f0842c7d;
     border-radius: 10px;
     text-align: left; /* Align text to the left */
-    padding: 10px;
+    padding:10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 90%;
+    height: 80%;
     width: 100%; /* Make the card fit its column */
-    
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Space between h3 and price */
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth effect */
 }
-.allItems-Card img{
+
+.allItems-Card:hover {
+    transform: translateY(-10px); /* Lift the card up slightly */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Increase shadow for a pop effect */
+    background-color: #ffe5b5; /* Slight background color change on hover */
+}
+
+.allItems-Card img {
     max-width: 100%;
-    height: auto;
-    
+    height: 80%;
 }
+
 .allItems-Card h3 {
     font-size: 13px;
     margin: 10px 0;
+   
 }
 
 .price {
@@ -155,40 +191,4 @@ main{
     font-size: 13px;
     align-self: flex-start; /* Align the price to the start (left) */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

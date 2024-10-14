@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="shop2.css">
+    <link rel="stylesheet" href="dropdown.css">
 </head>
 <body>
     <header>
@@ -26,97 +27,32 @@
         </nav>
     </header>
     <main>
-        <div class="category-dropdown">
-            <button id="dog-category-button" class="category-button">Dog</button>
-            <ul id="dog-category-list" class="category-list" aria-hidden="true">
-                <li class="category-item" data-value="dog-food">Dog Food</li>
-                <li class="category-item" data-value="dog-treats">Dog Treats</li>
-                <li class="category-item" data-value="bowls-and-feeders">Bowls and Feeders</li>
-                <li class="category-item" data-value="dog-cage">Dog Cage</li>
-                <li class="category-item" data-value="dog-health-supplements">Dog Health Supplements</li>
-                <li class="category-item" data-value="dog-accessories">Dog Accessories</li>
-            </ul>
+        <div class="CuddlePaws">
+            <div class="category-dropdown">
+                <button id="dog-category-button" class="category-button">Dog</button>
+                <ul class="category-list" id="dog-category-list" aria-hidden="true">
+                    <li><a href="#" class="category-item">Dog Food</a></li>
+                    <li><a href="#dog-bowls" class="category-item">Bowls and Feeders</a></li>
+                    <li><a href="#dog-cage" class="category-item">Dog Cage / Accessories</a></li>
+                    <li><a href="#dog-health-supplements" class="category-item">Dog Health Supplements</a></li>
+                </ul>
+            </div>
+            
+            <div class="category-dropdown">
+                <button id="cat-category-button" class="category-button">Cat</button>
+                <ul class="category-list" id="cat-category-list" aria-hidden="true">
+                    <li><a href="#cat-food" class="category-item">Cat Food</a></li>
+                    <li><a href="#cat-bowls" class="category-item">Bowls and Feeders</a></li>
+                    <li><a href="#cat-litters" class="category-item">Cat Litters / House</a></li>
+                    <li><a href="#cat-health-supplements" class="category-item">Cat Health Supplements</a></li>
+                </ul>
+            </div>
         </div>
-        
-        <div class="category-dropdown">
-            <button id="cat-category-button" class="category-button">Cat</button>
-            <ul id="cat-category-list" class="category-list" aria-hidden="true">
-                <li class="category-item" data-value="cat-food">Cat Food</li>
-                <li class="category-item" data-value="cat-treats">Cat Treats</li>
-                <li class="category-item" data-value="bowls-and-feeders">Bowls and Feeders</li>
-                <li class="category-item" data-value="cat-litters">Cat Litters</li>
-                <li class="category-item" data-value="cat-health-supplement">Cat Health Supplement</li>
-                <li class="category-item" data-value="cat-house">Cat House</li>
-            </ul>
-        </div>
-        
-              
-
         <section class="food-category">
             <h2>Dry Foods</h2>
             <div class="food-grid">
-                <!-- Example of a product card -->
                 <div class="food-card">
                     <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Brit Premium by Nature 400g">
                     <h3>Brit Premium by Nature 400g</h3>
                     <p class="price">₱ 198.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Holistic Recipe Lamb Meal and Rice">
-                    <h3>Holistic Recipe Lamb Meal and Rice</h3>
-                    <p class="price">₱ 2,000.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Special Dog 15kg">
-                    <h3>Special Dog 15kg</h3>
-                    <p class="price">₱ 3,000.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Special Dog 15kg">
-                    <h3>Special Dog 15kg</h3>
-                    <p class="price">₱ 3,000.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Special Dog 15kg">
-                    <h3>Special Dog 15kg</h3>
-                    <p class="price">₱ 3,000.00</p>
-                </div>
-                <!-- Add more food cards as needed -->
-            </div>
-        </section>
-
-        <section class="food-category">
-            <h2>Wet Foods</h2>
-            <div class="food-grid">
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Doggo 150g">
-                    <h3>Doggo 150g</h3>
-                    <p class="price">₱ 60.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Azzi">
-                    <h3>Azzi</h3>
-                    <p class="price">₱ 90.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Special Dog 15kg">
-                    <h3>Special Dog 15kg</h3>
-                    <p class="price">₱ 3,000.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Special Dog 15kg">
-                    <h3>Special Dog 15kg</h3>
-                    <p class="price">₱ 3,000.00</p>
-                </div>
-                <div class="food-card">
-                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Special Dog 15kg">
-                    <h3>Special Dog 15kg</h3>
-                    <p class="price">₱ 3,000.00</p>
-                </div>
-                <!-- Add more food cards as needed -->
-            </div>
-        </section>
-    </main>
-    <script src="shop2Script.js"></script>
-</body>
-</html>
+                
