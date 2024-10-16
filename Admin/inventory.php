@@ -29,19 +29,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmt->close();
         $conn->close();
-        exit;
+        exit; // Exit after handling the update
+    }
+
+    if (isset($_POST['add_product'])) {
+        $product_name = $_POST['product_name'];
+        $product_category = $_POST['product_category'];
+        $product_stocks = $_POST['product_stocks'];
+        $product_price = $_POST['product_price'];
+
+        $stmt = $conn->prepare("INSERT INTO products (Product_Name, Product_Category, Product_Stocks, Product_Price) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssdi", $product_name, $product_category, $product_stocks, $product_price);
+
+        if ($stmt->execute()) {
+            echo json_encode(['status' => 'success']);
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Failed to add product.']);
+        }
+
+        $stmt->close();
+        $conn->close();
+        exit; // Exit after handling the add
     }
 }
 
-$products = [];
-$sql = "SELECT * FROM products";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $products[] = $row;
+// Function to fetch products from the database
+function fetchProducts($conn) {
+    $products = [];
+    $sql = "SELECT * FROM products";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $products[] = $row;
+        }
     }
+    return $products;
 }
 
+// Fetch initial product list
+$products = fetchProducts($conn);
 $conn->close();
 ?>
 
@@ -54,7 +80,6 @@ $conn->close();
     <title>Inventory</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="inventory.css">
-    
 </head>
 
 <body>
@@ -103,7 +128,7 @@ $conn->close();
                     <tbody id="product-rows">
                         <!-- Existing product rows will be dynamically displayed here -->
                         <?php foreach ($products as $product): ?>
-                            <tr>
+                            <tr data-id="<?php echo $product['Product_Id']; ?>">
                                 <td><?php echo htmlspecialchars($product['Product_Name']); ?></td>
                                 <td><?php echo htmlspecialchars($product['Product_Category']); ?></td>
                                 <td><?php echo htmlspecialchars($product['Product_Stocks']); ?></td>
@@ -119,7 +144,7 @@ $conn->close();
         </div>
     </div>
 
-    <script src="inventory.js"></script>
+    <script src=inventory.js></script>
 </body>
 
 </html>
