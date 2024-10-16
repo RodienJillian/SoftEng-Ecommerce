@@ -29,12 +29,17 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `Admin_Id` int(6) NOT NULL,
-  `User_Id` int(5) NOT NULL,
   `Username` varchar(50) NOT NULL,
   `Password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+--
+-- Dumping data for table admin
+--
 
--- --------------------------------------------------------
+INSERT INTO admin (Admin_Id, Username, Password) VALUES
+(1, 'cuddlepawspandi', 'cuddlepaws24-25');
+
+-- ---------------------------------------------------------- --------------------------------------------------------
 
 --
 -- Table structure for table `cart`
@@ -190,99 +195,135 @@ ALTER TABLE `admin`
 --
 -- Indexes for table `cart`
 --
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`Cart_Id`);
+ALTER TABLE cart
+  ADD PRIMARY KEY (Cart_Id),
+  ADD KEY cart_ibfk_1 (User_Id),
+  ADD KEY Product_Id (Product_Id);
 
 --
--- Indexes for table `category`
+-- Indexes for table category
 --
-ALTER TABLE `category`
-  ADD PRIMARY KEY (`Category_Id`);
+ALTER TABLE category
+  ADD PRIMARY KEY (Category_Id);
 
 --
--- Indexes for table `delivery_address`
+-- Indexes for table delivery_address
 --
-ALTER TABLE `delivery_address`
-  ADD PRIMARY KEY (`Address_Id`);
+ALTER TABLE delivery_address
+  ADD PRIMARY KEY (Address_Id),
+  ADD KEY User_Id (User_Id);
 
 --
 -- Indexes for table `orders`
 --
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`Order_Id`);
+ALTER TABLE orders
+  ADD PRIMARY KEY (Order_Id),
+  ADD KEY User_Id (User_Id);
 
 --
--- Indexes for table `order_items`
+-- Indexes for table order_items
 --
-ALTER TABLE `order_items`
-  ADD PRIMARY KEY (`Order_ItemId`);
+ALTER TABLE order_items
+  ADD PRIMARY KEY (Order_ItemId),
+  ADD KEY Order_Id (Order_Id),
+  ADD KEY Product_Id (Product_Id);
 
 --
--- Indexes for table `products`
+-- Indexes for table products
 --
-ALTER TABLE `products`
-  ADD PRIMARY KEY (`Product_Id`);
+ALTER TABLE products
+  ADD PRIMARY KEY (Product_Id);
 
 --
 -- Indexes for table `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`User_Id`),
-  ADD UNIQUE KEY `Username` (`Username`),
-  ADD UNIQUE KEY `Email` (`Email`);
+ALTER TABLE users
+  ADD PRIMARY KEY (User_Id),
+  ADD UNIQUE KEY Username (Username),
+  ADD UNIQUE KEY Email (Email),
+  ADD UNIQUE KEY Username_2 (Username,Email);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT for table admin
 --
-ALTER TABLE `admin`
-  MODIFY `Admin_Id` int(6) NOT NULL AUTO_INCREMENT;
+ALTER TABLE admin
+  MODIFY Admin_Id int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `cart`
+-- AUTO_INCREMENT for table cart
 --
-ALTER TABLE `cart`
-  MODIFY `Cart_Id` int(4) NOT NULL AUTO_INCREMENT;
+ALTER TABLE cart
+  MODIFY Cart_Id int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
-ALTER TABLE `category`
-  MODIFY `Category_Id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE category
+  MODIFY Category_Id int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `delivery_address`
+-- AUTO_INCREMENT for table delivery_address
 --
-ALTER TABLE `delivery_address`
-  MODIFY `Address_Id` int(5) NOT NULL AUTO_INCREMENT;
+ALTER TABLE delivery_address
+  MODIFY Address_Id int(5) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `orders`
+-- AUTO_INCREMENT for table orders
 --
-ALTER TABLE `orders`
-  MODIFY `Order_Id` int(4) NOT NULL AUTO_INCREMENT;
+ALTER TABLE orders
+  MODIFY Order_Id int(4) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `order_items`
+-- AUTO_INCREMENT for table order_items
 --
-ALTER TABLE `order_items`
-  MODIFY `Order_ItemId` int(4) NOT NULL AUTO_INCREMENT;
-
+ALTER TABLE order_items
+  MODIFY Order_ItemId int(4) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `products`
 --
-ALTER TABLE `products`
-  MODIFY `Product_Id` int(4) NOT NULL AUTO_INCREMENT;
+ALTER TABLE products
+  MODIFY Product_Id int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT for table users
 --
-ALTER TABLE `users`
-  MODIFY `User_Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+ALTER TABLE users
+  MODIFY User_Id int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table cart
+--
+ALTER TABLE cart
+  ADD CONSTRAINT cart_ibfk_1 FOREIGN KEY (User_Id) REFERENCES users (User_Id),
+  ADD CONSTRAINT cart_ibfk_2 FOREIGN KEY (Product_Id) REFERENCES products (Product_Id);
+
+--
+-- Constraints for table delivery_address
+--
+ALTER TABLE delivery_address
+  ADD CONSTRAINT delivery_address_ibfk_1 FOREIGN KEY (User_Id) REFERENCES users (User_Id);
+
+--
+-- Constraints for table orders
+--
+ALTER TABLE orders
+  ADD CONSTRAINT orders_ibfk_1 FOREIGN KEY (User_Id) REFERENCES users (User_Id);
+
+--
+-- Constraints for table order_items
+--
+ALTER TABLE order_items
+  ADD CONSTRAINT order_items_ibfk_1 FOREIGN KEY (Order_Id) REFERENCES orders (Order_Id),
+  ADD CONSTRAINT order_items_ibfk_2 FOREIGN KEY (Product_Id) REFERENCES products (Product_Id);
 COMMIT;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
