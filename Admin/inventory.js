@@ -1,5 +1,3 @@
-// inventory.js
-
 const productRows = document.getElementById('product-rows');
 const sidebar = document.querySelector('.sidebar');
 const toggleButton = document.querySelector('.sidebar-toggle');
@@ -10,7 +8,7 @@ let isEditing = false; // Flag to indicate if we are in edit mode
 // Sidebar toggle functionality
 toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
-    
+
     // Update the button content based on the sidebar's state
     if (sidebar.classList.contains('collapsed')) {
         toggleButton.textContent = '↦'; // Reverse symbol when collapsed
@@ -61,7 +59,7 @@ saveBtn.addEventListener('click', function (event) {
     };
 
     // Send AJAX request to add the product
-    fetch('', { // Using empty string to refer to the current PHP file
+    fetch('inventory.php', { // Use the current PHP file to handle the request
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -109,7 +107,7 @@ document.addEventListener('click', function(event) {
         const currentPrice = cells[3].innerText;
 
         // Get the product ID from data attribute
-        const productId = event.target.getAttribute('data-id'); // Assuming you have the product ID stored in a data attribute
+        const productId = event.target.getAttribute('data-id');
 
         // Replace the row content with input fields for editing
         row.innerHTML = `
@@ -131,7 +129,7 @@ document.addEventListener('click', function(event) {
             const updatedPrice = row.querySelector('input[name="edit_product_price"]').value;
 
             const data = {
-                product_id: productId, // Add the product ID to the data
+                product_id: productId,
                 product_name: updatedName,
                 product_category: updatedCategory,
                 product_stocks: updatedStocks,
@@ -140,7 +138,7 @@ document.addEventListener('click', function(event) {
             };
 
             // Send the updated data via fetch
-            fetch('', {
+            fetch('inventory.php', { // Use the current PHP file to handle the request
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -178,3 +176,31 @@ document.addEventListener('click', function(event) {
         });
     }
 });
+
+// Fetch products on page load
+document.addEventListener('DOMContentLoaded', () => {
+    fetchProducts();
+});
+
+// Function to fetch and display products
+function fetchProducts() {
+    fetch('fetch_products.php') // Assuming you have a separate PHP script to fetch products
+        .then(response => response.json())
+        .then(products => {
+            productRows.innerHTML = ''; // Clear existing rows
+            products.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${product.Product_Name}</td>
+                    <td>${product.Product_Category}</td>
+                    <td>${product.Product_Stocks}</td>
+                    <td>${product.Product_Price}</td>
+                    <td>
+                        <button type="button" class="edit-btn" data-id="${product.Product_Id}">Edit</button>
+                    </td>
+                `;
+                productRows.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error fetching products:', error));
+}
