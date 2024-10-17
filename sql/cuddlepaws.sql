@@ -154,6 +154,14 @@ INSERT INTO `products` (`Product_Name`, `Product_Description`, `Product_ImageUrl
 
 
 
+--Table structure for table search
+
+CREATE TABLE `search` (
+  `Product_Id` int(4) NOT NULL,
+   `Product_Name` varchar(50) NOT NULL,
+  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+  
 -- --------------------------------------------------------
 
 --
