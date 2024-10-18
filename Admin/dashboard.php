@@ -12,7 +12,7 @@
     <header>
         <nav>
             <div class="logo">
-                <a href="dashboard.html">Admin</a>
+                <a href="dashboard.php">Admin</a>
             </div>
         </nav>
     </header>
@@ -25,9 +25,9 @@
                     <a href="#" class="logo-text">Cuddle <span>Paws</span></a>
                 </div>
                 <ul>
-                    <li><a href="dashboard.html">Dashboard</a></li>
-                    <li><a href="inventory.html">Inventory</a></li>
-                    <li><a href="orders.html">Orders</a></li>
+                    <li><a href="dashboard.php">Dashboard</a></li>
+                    <li><a href="inventory.php">Inventory</a></li>
+                    <li><a href="orders.php">Orders</a></li>
                 </ul>
             </div>            
             <div class="dashboard">

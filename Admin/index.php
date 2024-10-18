@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         if ($row['Password'] === $password) { 
             $_SESSION['admin_id'] = $row['Admin_Id']; 
-            header("Location: dashboard.html"); 
+            header("Location: dashboard.php"); 
             exit();
         } else {
             $alert_message = "Invalid password.";
@@ -81,11 +81,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <img src="https://res.cloudinary.com/dpxfbom0j/image/upload/v1728356362/eye_ie4zen.png" alt="Show/Hide Password" id="password-icon">
                         </span>
                     </div>
-                    <button type="submit">Log In</button> 
+                    <button type="submit">Log In</button>
                 </form>
             </div>
         </div>
     </main>
-    <script src="js/loginpassw.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

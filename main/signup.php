@@ -45,8 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/signup.css">
-    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/header.css">
     <title>Cuddle Paws Contact Form</title>
     <link rel="icon" href="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" type="image/x-icon">
     <style>
@@ -62,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <li><a href="index.php#about-us">About</a></li>
                 <li><a href="login.php">Log In/Sign Up</a></li>
             </ul>
-            <input type="text" placeholder="🔍 Search">
             <div class="logo">
                 <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" alt="Hero Image">
                 <a href="index.php">Cuddle Paws</a>

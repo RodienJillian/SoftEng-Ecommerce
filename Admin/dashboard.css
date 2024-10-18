@@ -149,8 +149,12 @@ header {
     text-align: left;
     border-radius: 10px;
     font-weight: lighter;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
-
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 .welcome {
     background-color: #D7CD63;
 }
