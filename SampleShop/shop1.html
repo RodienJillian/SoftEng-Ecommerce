@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuddle Paws</title>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/shop1.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop1.php">Shop</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="index.html#about-us">About</a></li>
+                <li><a href="signup.html">Log In/Sign Up</a></li>
+            </ul>
+            <input type="text" placeholder="🔍 Search">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" alt="Hero Image">
+                <a href="#">Cuddle Paws</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="CuddlePaws">
+            <section class="pets-category">
+                <div class="dog" onclick="toggleDropdown('dogDropdown')">
+                    <a href="#Shop_Dog">
+                        <img src="https://res.cloudinary.com/dpjhzyge9/image/upload/v1728379963/Add_a_heading_2_rmeo7b.png">
+                    </a>
+                </div>
+                <div class="cat" onclick="toggleDropdown('catDropdown')">
+                    <a href="#Shop_Cat">
+                        <img src="https://res.cloudinary.com/dpjhzyge9/image/upload/v1728380501/Add_a_heading_6_ylmccn.png">
+                    </a>
+                </div>
+                <div class="fish" onclick="toggleDropdown('fishDropdown')">
+                    <a href="#Shop_fish">
+                        <img src="https://res.cloudinary.com/dpjhzyge9/image/upload/v1728380500/Add_a_heading_4_sern0a.png">
+                    </a>
+                </div>
+                <div class="smallPet" onclick="toggleDropdown('smallPetDropdown')">
+                    <a href="#Shop_smallPet">
+                        <img src="https://res.cloudinary.com/dpjhzyge9/image/upload/v1728380500/Add_a_heading_5_cewynu.png">
+                    </a>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Dog Products -->
+        <section class="Shop_Dog" id="Shop_Dog">
+            <h2>Shop for Dogs</h2>
+            <div class="shopDog" id="dogDropdown" class="dropdown-content">
+                <div>Dog Foods</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Brit Premium by Nature 400g">
+                        <div class="card-title">Dog Food 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-food2.jpg" alt="Dog Food 2">
+                        <div class="card-title">Dog Food 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-food3.jpg" alt="Dog Food 3">
+                        <div class="card-title">Dog Food 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-food4.jpg" alt="Dog Food 4">
+                        <div class="card-title">Dog Food 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-food5.jpg" alt="Dog Food 5">
+                        <div class="card-title">Dog Food 5</div>
+                    </div>
+                </div>
+                <div>Dog Treats</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="dog-treat1.jpg" alt="Dog Treat 1">
+                        <div class="card-title">Dog Treat 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-treat2.jpg" alt="Dog Treat 2">
+                        <div class="card-title">Dog Treat 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-treat3.jpg" alt="Dog Treat 3">
+                        <div class="card-title">Dog Treat 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-treat4.jpg" alt="Dog Treat 4">
+                        <div class="card-title">Dog Treat 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-treat5.jpg" alt="Dog Treat 5">
+                        <div class="card-title">Dog Treat 5</div>
+                    </div>
+                </div>
+                <div>Dog Supplies</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="dog-supplies1.jpg" alt="Dog Supplies 1">
+                        <div class="card-title">Dog Supplies 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-supplies2.jpg" alt="Dog Supplies 2">
+                        <div class="card-title">Dog Supplies 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-supplies3.jpg" alt="Dog Supplies 3">
+                        <div class="card-title">Dog Supplies 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-supplies4.jpg" alt="Dog Supplies 4">
+                        <div class="card-title">Dog Supplies 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="dog-supplies5.jpg" alt="Dog Supplies 5">
+                        <div class="card-title">Dog Supplies 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cat Products -->
+        <section class="Shop_Cat" id="Shop_Cat">
+            <h2>Shop for Cats</h2>
+            <div class="shopCat" id="catDropdown" class="dropdown-content">
+                <div>Cat Foods</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="cat-food1.jpg" alt="Cat Food 1">
+                        <div class="card-title">Cat Food 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-food2.jpg" alt="Cat Food 2">
+                        <div class="card-title">Cat Food 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-food3.jpg" alt="Cat Food 3">
+                        <div class="card-title">Cat Food 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-food4.jpg" alt="Cat Food 4">
+                        <div class="card-title">Cat Food 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-food5.jpg" alt="Cat Food 5">
+                        <div class="card-title">Cat Food 5</div>
+                    </div>
+                </div>
+                <div>Cat Treats</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="cat-treat1.jpg" alt="Cat Treat 1">
+                        <div class="card-title">Cat Treat 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-treat2.jpg" alt="Cat Treat 2">
+                        <div class="card-title">Cat Treat 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-treat3.jpg" alt="Cat Treat 3">
+                        <div class="card-title">Cat Treat 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-treat4.jpg" alt="Cat Treat 4">
+                        <div class="card-title">Cat Treat 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-treat5.jpg" alt="Cat Treat 5">
+                        <div class="card-title">Cat Treat 5</div>
+                    </div>
+                </div>
+                <div>Cat Supplies</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="cat-supplies1.jpg" alt="Cat Supplies 1">
+                        <div class="card-title">Cat Supplies 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-supplies2.jpg" alt="Cat Supplies 2">
+                        <div class="card-title">Cat Supplies 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-supplies3.jpg" alt="Cat Supplies 3">
+                        <div class="card-title">Cat Supplies 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-supplies4.jpg" alt="Cat Supplies 4">
+                        <div class="card-title">Cat Supplies 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="cat-supplies5.jpg" alt="Cat Supplies 5">
+                        <div class="card-title">Cat Supplies 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fish Products -->
+        <section class="Shop_fish" id="Shop_fish">
+            <h2>Shop for Fish</h2>
+            <div class="shopFish" id="fishDropdown" class="dropdown-content">
+                <div>Fish Feeds</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="fish-feed1.jpg" alt="Fish Feed 1">
+                        <div class="card-title">Fish Feed 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-feed2.jpg" alt="Fish Feed 2">
+                        <div class="card-title">Fish Feed 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-feed3.jpg" alt="Fish Feed 3">
+                        <div class="card-title">Fish Feed 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-feed4.jpg" alt="Fish Feed 4">
+                        <div class="card-title">Fish Feed 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-feed5.jpg" alt="Fish Feed 5">
+                        <div class="card-title">Fish Feed 5</div>
+                    </div>
+                </div>
+                <div>Water Care</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="water-care1.jpg" alt="Water Care 1">
+                        <div class="card-title">Water Care 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="water-care2.jpg" alt="Water Care 2">
+                        <div class="card-title">Water Care 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="water-care3.jpg" alt="Water Care 3">
+                        <div class="card-title">Water Care 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="water-care4.jpg" alt="Water Care 4">
+                        <div class="card-title">Water Care 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="water-care5.jpg" alt="Water Care 5">
+                        <div class="card-title">Water Care 5</div>
+                    </div>
+                </div>
+                <div>Fish Supplies</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="fish-supplies1.jpg" alt="Fish Supplies 1">
+                        <div class="card-title">Fish Supplies 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-supplies2.jpg" alt="Fish Supplies 2">
+                        <div class="card-title">Fish Supplies 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-supplies3.jpg" alt="Fish Supplies 3">
+                        <div class="card-title">Fish Supplies 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-supplies4.jpg" alt="Fish Supplies 4">
+                        <div class="card-title">Fish Supplies 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="fish-supplies5.jpg" alt="Fish Supplies 5">
+                        <div class="card-title">Fish Supplies 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Small Pet Products -->
+        <section class="Shop_smallPet" id="Shop_smallPet">
+            <h2>Shop for Small Pets</h2>
+            <div class="shopSmallPet" id="smallPetDropdown" class="dropdown-content">
+                <div>Foods</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="small-pet-food1.jpg" alt="Small Pet Food 1">
+                        <div class="card-title">Small Pet Food 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-food2.jpg" alt="Small Pet Food 2">
+                        <div class="card-title">Small Pet Food 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-food3.jpg" alt="Small Pet Food 3">
+                        <div class="card-title">Small Pet Food 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-food4.jpg" alt="Small Pet Food 4">
+                        <div class="card-title">Small Pet Food 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-food5.jpg" alt="Small Pet Food 5">
+                        <div class="card-title">Small Pet Food 5</div>
+                    </div>
+                </div>
+                <div>Supplies</div>
+                <div class="product-cards">
+                    <div class="card">
+                        <img src="small-pet-supplies1.jpg" alt="Small Pet Supplies 1">
+                        <div class="card-title">Small Pet Supplies 1</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-supplies2.jpg" alt="Small Pet Supplies 2">
+                        <div class="card-title">Small Pet Supplies 2</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-supplies3.jpg" alt="Small Pet Supplies 3">
+                        <div class="card-title">Small Pet Supplies 3</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-supplies4.jpg" alt="Small Pet Supplies 4">
+                        <div class="card-title">Small Pet Supplies 4</div>
+                    </div>
+                    <div class="card">
+                        <img src="small-pet-supplies5.jpg" alt="Small Pet Supplies 5">
+                        <div class="card-title">Small Pet Supplies 5</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            
+            // Ensure we only toggle dropdown, not product cards
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+
+        // Optional: Ensure cards do not disappear when interacting with the dropdown
+        const categoryButton = document.querySelector('.pets-category > div'); 
+        categoryButton.addEventListener('click', () => {
+            document.querySelector('.product-cards').style.visibility = 'visible';
+        });
+
+    </script>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <p><strong>Email:</strong><br>
+                cuddlepawsph@gmail.com</p>
+            </div>
+            <div class="footer-section">
+                <p><strong>Phone:</strong><br>
+                (63) 947-703-0508<br>
+                (63) 927-704-6513<br>
+                (63) 927-283-0230</p>
+            </div>
+            <div class="footer-section">
+                <p><strong>Address:</strong><br>
+                Poblacion, Pandi,<br>
+                Bulacan, Philippines</p>
+            </div>
+        </div>
+        <p class="footer-bottom">For educational purposes only</p>
+        <p class="footer-bottom">&copy;2024 Cuddle Paws. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
