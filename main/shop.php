@@ -29,7 +29,7 @@ function fetchProductsByCategory($conn, $category) {
     <title>Cuddle Paws</title>
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="css/shop.css">
 </head>
 <body>
     <header>
