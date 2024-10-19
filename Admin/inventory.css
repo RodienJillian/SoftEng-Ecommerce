@@ -23,11 +23,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F19447; /* Customize your header background color */
+    background-color: #F19447; 
     padding: 20px;
     text-align: center;
-    z-index: 1000; /* Ensures the header stays on top of other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .logo {
@@ -61,26 +61,27 @@ header {
 }
 
 .paw-logo {
-    width: 40px; /* Adjust the size of the paw logo */
+    width: 40px; 
     height: auto;
-    margin-right: 10px; /* Spacing between the logo and text */
+    margin-right: 10px;
 }
 
 .logo-text {
     margin-top: 8px;
     font-size: 1.5em;
     font-weight: bolder;
-    color: #505631; /* Customize the color of the logo text */
+    color: #505631;
 }
 
 .logo-text span {
-    color: #DE6E27; /* Customize the color for 'Paws' */
+    color: #DE6E27; 
 }
 
 /* Container */
 .container {
     display: flex;
-    height: 100vh;
+    min-height: 100vh; 
+    background-color: #FFF0D8; 
 }
 
 /* Sidebar styling */
@@ -92,6 +93,7 @@ header {
     flex-direction: column;
     justify-content: flex-start;
     transition: width 0.3s ease; 
+    min-height: 100vh; 
 }
 
 /* Move the list downwards */
@@ -142,6 +144,7 @@ header {
 .sidebar.collapsed {
     width: 60px;
     overflow: hidden;
+    min-height: 100vh; 
 }
 
 .sidebar.collapsed .logo-container,
@@ -152,8 +155,9 @@ header {
 .inventory {
     flex: 1;
     padding: 30px;
-    background-color: #FFF0D8;
-    padding-top: 100px; /* Adds space at the top so the h1 is visible */
+    background-color: #FFF0D8; 
+    padding-top: 100px;
+    min-height: 100vh; 
 }
 
 .inventory h1 {
@@ -193,31 +197,19 @@ header {
 /* Table Styles */
 .inventory-table {
     width: 100%;
-    border-collapse: collapse; /* Merge border spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for the table */
+    border-collapse: collapse; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-/* Ensure constant width for thead */
 .inventory-table th,
 .inventory-table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
-    overflow: hidden; /* Hide overflowed content */
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
 }
 
-/* Explicit widths for each column */
-.inventory-table th,
-.inventory-table td {
-    padding: 12px 15px;
-    border: 1px solid #ddd;
-    overflow: hidden; /* Hide overflowed content */
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
-}
-
-/* Explicit widths for each column, remove image and description widths */
 .inventory-table th:nth-child(1),
 .inventory-table td:nth-child(1) {
     width: 15%; /* Product ID */
