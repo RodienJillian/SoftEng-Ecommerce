@@ -28,7 +28,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sssssssss", $firstname, $lastname, $email, $phone_num, $municipality, $barangay, $phase, $username, $password);
 
     if ($stmt->execute()) {
-        echo "Account created successfully!";
+        // Redirect to success page
+        header("Location: success.php");
+        exit();
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -36,7 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->close();
     $conn->close();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -44,11 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/signup.css">
     <link rel="stylesheet" href="css/header.css">
     <title>Cuddle Paws Contact Form</title>
-    <link rel="icon" href="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" type="image/x-icon">
     <style>
     </style>
 </head>
@@ -103,6 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <label for="Phase">Phase/Block, Street</label>
                 <input type="text" class="signup" id="address" name="Phase" placeholder="Phase/Block, Street" required>
 
+                <!-- Account Section -->
                 <h2>Account</h2>
                 <div class="account-container">
                     <div>
@@ -111,7 +113,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                     <div>
                         <label for="password">Password</label>
-                        <input type="password" class="signup" id="password" name="Password" placeholder="Password" required> 
+                        <input type="password" class="signup" id="password" name="Password" placeholder="Password" required>
+                        <div>
+                            <input type="checkbox" id="show-password" onclick="togglePassword()"> 
+                            <div class="show-password">Show Password</div>
+                        </div>
                     </div>  
                 </div>
                 <div class="button-container">
@@ -121,6 +127,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
     </main>
-    <!-- <script src="password.js"></script> -->
+    <script>
+    function togglePassword() {
+        const passwordField = document.getElementById("password");
+        const showPasswordCheckbox = document.getElementById("show-password");
+
+        if (showPasswordCheckbox.checked) {
+            passwordField.type = "text"; // Show password
+        } else {
+            passwordField.type = "password"; // Hide password
+        }
+    }
+    </script>
 </body>
 </html>
