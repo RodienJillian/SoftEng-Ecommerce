@@ -1,13 +1,51 @@
+<?php
+// viewProduct.php
+// Database connection
+$servername = "localhost";
+$username = "root"; // Adjust as needed
+$password = ""; // Adjust as needed
+$dbname = "cuddlepaws";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Check if the product ID is present in the URL
+if (isset($_GET['id'])) {
+    $Product_Id = $_GET['id']; // Fixed missing semicolon
+
+    $sql = "SELECT Product_Name, Product_Price, Product_Description, Product_ImageUrl FROM products WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $Product_Id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if product exists
+    if ($result->num_rows > 0) {
+        $product = $result->fetch_assoc(); // Changed to $product for consistency
+    } else {
+        echo "Product not found in the shop.";
+        exit;
+    }
+
+    $stmt->close();
+} else {
+    echo "Product ID is not provided.";
+    exit;
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuddle Paws</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="viewProducts.css">
 </head>
 <body>
     <header>
@@ -21,7 +59,7 @@
             </ul>
             <input type="text" placeholder="🔍 Search">
             <div class="logo">
-                <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" alt="Hero Image">
+                <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" alt="Cuddle Paws Logo">
                 <a href="index.php">Cuddle Paws</a>
             </div>
         </nav>
@@ -35,7 +73,7 @@
                 <div class="variant-box" data-image="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224067/variant4.jpg">Variant 4</div>
             </div>
             <div class="product-image">
-                <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1728224064/turkeywithliver_khsioz.webp" alt="Product Image" id="current-product-image" style="width: 100%; max-width: 300px;">
+                <img src="<?php echo $product['Product_ImageUrl']; ?>" alt="<?php echo $product['Product_Name']; ?>" id="current-product-image" style="width: 100%; max-width: 300px;">
             </div>
             <div class="btn">
                 <div class="quantity-selector" id="btnQuant">
@@ -48,9 +86,9 @@
                 </div>
             </div>
             <div class="product-description">
-                <h4>Product Name</h4>
-                <h5>Price</h5>
-                <p> Description</p>
+                <h4><?php echo $product['Product_Name']; ?></h4> <!-- Display product name -->
+                <h5>Price: $<?php echo $product['Product_Price']; ?></h5> <!-- Display product price -->
+                <p><?php echo $product['Product_Description']; ?></p> <!-- Display product description -->
             </div>
         </div>
     </main>
@@ -69,8 +107,8 @@
 
         function addToCart() {
             const quantity = document.getElementById('quantity').value;
-            const productName = "Product Name"; // Replace with actual product name
-            const productPrice = "Product Price"; // Replace with actual product price
+            const productName = "<?php echo $product['Product_Name']; ?>"; // Use actual product name
+            const productPrice = "<?php echo $product['Product_Price']; ?>"; // Use actual product price
 
             // Example: Save to localStorage (could be a better structure for a real cart)
             localStorage.setItem('cart', JSON.stringify({ name: productName, price: productPrice, quantity: quantity }));
