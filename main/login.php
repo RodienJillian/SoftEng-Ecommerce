@@ -1,8 +1,6 @@
 <?php
 session_start();
-
 $alert_message = "";
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = isset($_POST['Username']) ? $_POST['Username'] : '';
     $password = isset($_POST['Password']) ? $_POST['Password'] : '';
