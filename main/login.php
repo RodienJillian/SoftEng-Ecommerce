@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 
 $alert_message = "";
 
@@ -11,9 +11,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $alert_message = "Both fields are required.";
     } else {
         $servername = "localhost";
-        $dbusername = "root"; 
-        $dbpassword = ""; 
-        $dbname = "cuddlepaws"; 
+        $dbusername = "root";
+        $dbpassword = "";
+        $dbname = "cuddlepaws";
 
         $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
@@ -26,13 +26,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($result->num_rows > 0) {
             $user = $result->fetch_assoc();
-            echo "Stored Password: " . $user['Password'];  // This should be a long hashed string
             if (password_verify($password, $user['Password'])) {
-                $alert_message = "Login successful! Welcome, " . htmlspecialchars($user['Username']);
+                // Store the username in the session
+                $_SESSION['Username'] = $user['Username'];
+                
+                // Redirect to the home page
+                header("Location: index.php");
+                exit(); // Ensure no further code is executed after redirection
             } else {
                 $alert_message = "Incorrect password.";
             }
-        
         } else {
             $alert_message = "No account found.";
         }
@@ -76,7 +79,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1>
                 <span class="first-color">Cuddle</span>
                 <span class="second-color">Paws</span>
-            </h1>            
+            </h1>
 
             <!-- Display the alert message if it exists -->
             <?php if (!empty($alert_message)): ?>
@@ -101,6 +104,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
     </main>
 
-    <script src="../js/loginpassw.js"></script>
+    <script src="js/loginpassw.js"></script>
 </body>
 </html>
