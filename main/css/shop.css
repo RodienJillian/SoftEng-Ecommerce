@@ -166,3 +166,21 @@ footer {
     font-size: 1rem;
     text-align: center;
 }
+
+#backToTop {
+    display: none; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 80px; 
+    height: 80px; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+}
+
+#backToTop img {
+    width: 100%;
+    height: auto; 
+}
+
