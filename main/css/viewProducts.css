@@ -30,7 +30,6 @@ main {
     justify-content: center; /* Center the content horizontally */
     align-items: center; /* Center the content vertically */
     max-width: 70%; /* Limit the width */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
     border-radius: 8px; /* Optional: Add rounded corners */
     overflow: hidden; /* Ensure image does not overflow */
 }
@@ -39,6 +38,8 @@ main {
     width: 100%; /* Ensure the image scales with container */
     height: auto; 
     object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+
 }
 
 .product-info {
@@ -171,13 +172,60 @@ p#modalProductPrice{
     font-weight: bold; /* Makes the price stand out */
 }
 
-p#modalProductDescription{
-    font-size:16px
+p#modalProductDescription {
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #434343;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    padding: 10px 15px;
+    border-left: 4px solid #be7506;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    background-color:rgb(255, 236, 193);
 }
 
-/* Style for disabled button */
 button.disabled {
     background-color: #ccc; /* Gray color for disabled state */
     color: #666!important;
     cursor: not-allowed;
+}
+
+ /* Modal */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: transparent;
+    margin: 5% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 80%; /* Adjust width as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute; /* Position it absolutely */
+    top: 120px; /* Adjust as needed */
+    right: 195px; /* Adjust as needed */
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Change color on hover */
+    text-decoration: none; /* No underline */
 }
