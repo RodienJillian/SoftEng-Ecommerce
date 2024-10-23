@@ -301,6 +301,9 @@ function fetchProductsByCategory($conn, $category) {
                     }
                     ?>
                 </div>
+                <a id="backToTop" href="#">
+                    <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726846812/icon-256x256-removebg-preview_xeotyt.png" alt="Back to Top" />
+                </a>
             </div>
         </section>
 
