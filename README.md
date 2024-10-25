@@ -8,9 +8,9 @@ Data Dictionaru: https://docs.google.com/document/d/1jqgWDgl8bYcncLnvTooWo01a-c8
 
 > Take note lang, ang pinaka updated version is yung nasa folder na.
 >
-> Iprioritize natin now yung Admin
+> Iprioritize natin now yung Cart
 >
-> Wala pang php: Admin, Cart, Shop
+> Kulang or wala pang php: Admin, Cart, Checkout
 > 
 > Please do tell sa gc 'pag may updates •ᴗ•
 
