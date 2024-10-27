@@ -30,7 +30,7 @@ a {
 .form-box {
     width: 75%;
     padding: 30px;
-    background-color: #FBE7C6; /* Light cream background */
+    background-color: #FBE7C6;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -38,7 +38,7 @@ a {
 /* Form titles */
 h2 {
     font-size: 1.6em;
-    color: #5A3825; /* Dark brown title color */
+    color: #5A3825; 
     margin-bottom: 20px;
 }
 
@@ -48,7 +48,7 @@ label {
     font-weight: bold;
     display: block;
     margin-bottom: 8px;
-    color: #6B4E3D; /* Darker text for labels */
+    color: #6B4E3D;
 }
 .show-password{
     font-size: 0.9em;
@@ -181,11 +181,11 @@ button{
     cursor: pointer;
     transition: background-color 0.3s ease;
     width: 150px;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2); 
 }
 
 button:hover {
-    background-color: #61A556; /* Darker shade on hover */
+    background-color: #61A556; 
 }
 
 .form-box form {

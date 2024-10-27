@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuddle Paws</title>
+    <title>Home</title>
     <link rel="icon" href="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
@@ -14,12 +14,11 @@
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="shop1.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="cart.php">Cart</a></li>
                 <li><a href="#about-us">About</a></li>
                 <li><a href="login.php">Log In/Sign Up</a></li>
             </ul>
-            <input type="text" placeholder="🔍 Search">
             <div class="logo">
                 <img src="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" alt="Hero Image">
                 <a href="#about-us">Cuddle Paws</a>
@@ -35,7 +34,7 @@
             <div class="hero-text">
                 <h1>Welcome to Cuddle Paws!</h1>
                 <p>At Cuddle Paws, we know that your pets are more than just animals; they’re family. That’s why we’re dedicated to providing the highest quality pet care supplies to keep your furry, feathered, and finned friends healthy and happy.</p>
-                <button>Shop Now</button>
+                <a href="shop.php"><button class="shop-now">Shop Now</button></a>
             </div>
         </div>
 

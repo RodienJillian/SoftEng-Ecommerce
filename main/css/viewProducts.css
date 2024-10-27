@@ -16,7 +16,7 @@ main {
 
 .container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 20px;
     padding: 5rem;
     max-width: 1200px;
@@ -25,25 +25,25 @@ main {
 }
 
 .product-image {
-    grid-column: 1; /* First column */
+    grid-column: 1;
     display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    max-width: 70%; /* Limit the width */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    overflow: hidden; /* Ensure image does not overflow */
+    justify-content: center; 
+    align-items: center; 
+    max-width: 70%;
+    border-radius: 8px; 
+    overflow: hidden;
 }
 
 .product-image img {
-    width: 100%; /* Ensure the image scales with container */
+    width: 100%; 
     height: auto; 
     object-fit: cover;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 
 }
 
 .product-info {
-    grid-column: 2; /* Second column */
+    grid-column: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -63,8 +63,6 @@ main {
 .product-description h5 {
     font-size: 24px;
     font-weight: bold;
-
-
 }
 
 .btn {
@@ -90,7 +88,7 @@ main {
     cursor: pointer;
     padding: 0 20px;
     font-size: 30px;
-    color: #201f1f; /* Sets text color */
+    color: #201f1f; 
 
 }
 
@@ -99,7 +97,7 @@ main {
     text-align: center;
     font-size: 24px;
     margin: 0;
-    color: #201f1f; /* Sets text color */
+    color: #201f1f; 
 
 }
 
@@ -128,48 +126,48 @@ main {
 /* Card container */
 .card {
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
-    overflow: hidden; /* Ensures content stays inside the card */
-    text-align: center; /* Centers text */
-    padding: 10px; /* Padding inside the card */
-    margin: 10px; /* Spacing between cards */
-    cursor: pointer; /* Pointer cursor to indicate clickability */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    overflow: hidden; 
+    text-align: center; 
+    padding: 10px; 
+    margin: 10px; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 /* Card hover effect */
 .card:hover {
-    transform: translateY(-10px); /* Lift the card slightly on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 /* Product image */
 .card img {
-    width: 100%; /* Ensures image takes up full width of card */
-    height: auto; /* Keeps aspect ratio */
-    border-radius: 8px; /* Optional: Rounds the corners of the image */
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
 }
 
 /* Card title (product name) */
 .card-title {
-    font-size: 12px; /* Adjust the font size as needed */
-    font-weight: bold; /* Makes the title bold */
-    margin: 10px 0; /* Adds spacing between title and image */
-    color: #201f1f; /* Sets text color */
+    font-size: 12px; 
+    font-weight: bold; 
+    margin: 10px 0; 
+    color: #201f1f; 
     text-align: left;}
 
 /* Price styling */
 .price {
-    font-size: 12px; /* Adjust the font size */
-    color: #201f1f; /* Sets text color */
-    font-weight: bold; /* Makes the price stand out */
-    margin-bottom: 10px; /* Adds space below the price */
+    font-size: 12px;
+    color: #201f1f;
+    font-weight: bold; 
+    margin-bottom: 10px; 
     text-align: left;
 }
 
 p#modalProductPrice{
     font-size:18px;
-    font-weight: bold; /* Makes the price stand out */
+    font-weight: bold; 
 }
 
 p#modalProductDescription {
@@ -188,36 +186,36 @@ p#modalProductDescription {
 }
 
 button.disabled {
-    background-color: #ccc; /* Gray color for disabled state */
+    background-color: #ccc; 
     color: #666!important;
     cursor: not-allowed;
 }
 
  /* Modal */
  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.4); /* Black background with transparency */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.4); 
 }
 
 .modal-content {
     background-color: transparent;
-    margin: 5% auto; /* 15% from the top and centered */
+    margin: 5% auto; 
     border: 1px solid #888;
-    width: 80%; /* Adjust width as needed */
+    width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .close {
-    position: absolute; /* Position it absolutely */
-    top: 120px; /* Adjust as needed */
-    right: 195px; /* Adjust as needed */
+    position: absolute;
+    top: 120px; 
+    right: 195px; 
     color: black;
     font-size: 28px;
     font-weight: bold;
@@ -226,6 +224,6 @@ button.disabled {
 
 .close:hover,
 .close:focus {
-    color: black; /* Change color on hover */
-    text-decoration: none; /* No underline */
+    color: black; 
+    text-decoration: none; 
 }

@@ -18,5 +18,5 @@ window.onload = function() {
     var passwordIcon = document.getElementById("password-icon");
 
     passwordField.type = "password"; 
-    passwordIcon.src = "https://res.cloudinary.com/dpxfbom0j/image/upload/v1728356363/hidden_kg0z7u.png"; // Show the hidden icon first
+    passwordIcon.src = "https://res.cloudinary.com/dpxfbom0j/image/upload/v1728356363/hidden_kg0z7u.png"; 
 };

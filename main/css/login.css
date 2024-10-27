@@ -40,23 +40,23 @@ h1 {
 }
 
 .first-color {
-    color: #505631; /* First color */
+    color: #505631; 
 }
 
 .second-color {
-    color: #DE6E27; /* Second color */
+    color: #DE6E27; 
 }
 
 .login-box input[type="email"],
 .login-box input[type="password"], 
 .login-box input[type="text"] {
-    width: 100%; /* Ensure both input fields are the same width */
+    width: 100%; 
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    box-sizing: border-box; /* Ensures padding is included in width */
+    box-sizing: border-box;
 }
 
 .login-box button {

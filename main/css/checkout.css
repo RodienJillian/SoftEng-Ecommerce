@@ -25,8 +25,7 @@ h1 {
     border-radius: 5px;
     width: 45%;
     margin-left: 30px;
-    /* margin-bottom: 20px; */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 .delivery-address h2 {
     font-size: 1.5rem;
@@ -105,7 +104,7 @@ input[type="text"] {
 
 .payment-item {
     display: grid;
-    grid-template-columns: 1fr auto; /* Create two columns: one for labels, one for prices */
+    grid-template-columns: 1fr auto; 
     margin-bottom: 10px;
     font-size: 1.1rem;
 }
@@ -116,7 +115,7 @@ input[type="text"] {
 
 .shipping-payment {
     display: grid;
-    grid-template-columns: 1fr auto; /* Create two columns: one for labels, one for prices */
+    grid-template-columns: 1fr auto; 
     margin-bottom: 10px;
     font-size: 1.1rem;
     border-bottom: 1px solid black;
@@ -126,12 +125,12 @@ input[type="text"] {
     padding: 5px 0;
 }
 .payment-item.total span {
-    font-weight: bold; /* Make the total bold */
+    font-weight: bold; 
     font-size: 1.2rem;
 }
 
 .payment-item span:nth-child(2) {
-    text-align: right; /* Align the price to the right */
+    text-align: right;
 }
 
 

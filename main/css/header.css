@@ -3,7 +3,7 @@ html {
 }
 
 body, main {
-    min-height: 100vh; /* 100% of the viewport height */
+    min-height: 100vh; 
 }
 
 /* Header Styles */
@@ -12,11 +12,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F19447; /* Customize your header background color */
+    background-color: #F19447; 
     padding: 20px;
     text-align: center;
-    z-index: 1000; /* Ensures the header stays on top of other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 nav {

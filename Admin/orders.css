@@ -2,9 +2,7 @@ html {
     overflow-y: scroll;
 }
 
-
 body, main {
-    /* font-family: 'Arial', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,11 +23,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #F19447; /* Customize your header background color */
+    background-color: #F19447; 
     padding: 20px;
     text-align: center;
-    z-index: 1000; /* Ensures the header stays on top of other content */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
 .logo{
@@ -66,19 +64,19 @@ header {
 }
 
 .paw-logo {
-    width: 40px; /* Adjust the size of the paw logo */
+    width: 40px; 
     height: auto;
-    margin-right: 10px; /* Spacing between the logo and text */
+    margin-right: 10px; 
 }
 .logo-text {
     margin-top: 8px;
     font-size: 1.5em;
     font-weight: bolder;
-    color: #505631; /* Customize the color of the logo text */
+    color: #505631; 
 }
 
 .logo-text span {
-    color: #DE6E27; /* Customize the color for 'Paws' */
+    color: #DE6E27; 
 }
 
 /* Container */
@@ -101,7 +99,7 @@ header {
     text-align: center;
     list-style-type: none;
     padding: 0;
-    margin-top: 65px; /* Adjust this value to move the items further down */
+    margin-top: 65px; 
 }
 
 .sidebar ul li {
@@ -145,10 +143,10 @@ header {
 }
 /* Orders Section */
 .orders {
-    flex-grow: 1; /* Allows the orders section to take the remaining space */
+    flex-grow: 1; 
     padding: 20px;
-    margin-top: 80px; /* Space below the fixed header */
-    background-color: #FFF0D8; /* Background color for orders section */
+    margin-top: 80px; 
+    background-color: #FFF0D8; 
 }
 
 /* Orders Header */
@@ -172,27 +170,26 @@ header {
 /* Orders Table */
 .orders-table {
     width: 100%;
-    border-collapse: collapse; /* Merge border spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for the table */
+    border-collapse: collapse; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
-
 
 .orders-table th,
 .orders-table td {
-    border: 1px solid #ddd; /* Add a border around the cells */
-    padding: 8px; /* Optional: Add some padding for better spacing */
+    border: 1px solid #ddd;
+    padding: 8px;
 }
 
 .orders-table th {
-    background-color: #f2f2f2; /* Optional: Add a background color to the headers */
-    text-align: left; /* Align text in the header cells */
+    background-color: #f2f2f2; 
+    text-align: left; 
 }
 
 .orders-table tr:hover {
-    background-color: #f1f1f1; /* Highlight row on hover */
+    background-color: #f1f1f1;
 }
 
 .orders-table td {
-    background-color: #fff; /* Cell background color */
-    color: #333; /* Cell text color */
+    background-color: #fff;
+    color: #333;
 }

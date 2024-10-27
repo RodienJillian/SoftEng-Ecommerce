@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/signup.css">
     <link rel="stylesheet" href="css/header.css">
-    <title>Cuddle Paws Contact Form</title>
+    <title>Cuddle Paws Sign Up</title>
     <style>
     </style>
 </head>
@@ -58,8 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <nav>
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="shop1.html">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="cart.php">Cart</a></li>
                 <li><a href="index.php#about-us">About</a></li>
                 <li><a href="login.php">Log In/Sign Up</a></li>
             </ul>

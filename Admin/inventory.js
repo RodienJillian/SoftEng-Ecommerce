@@ -3,21 +3,18 @@ const sidebar = document.querySelector('.sidebar');
 const toggleButton = document.querySelector('.sidebar-toggle');
 const addProductBtn = document.querySelector('.add-product-btn');
 const tableBody = document.querySelector('.inventory-table tbody');
-let isEditing = false; // Flag to indicate if we are in edit mode
+let isEditing = false;
 
-// Sidebar toggle functionality
 toggleButton.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
 
-    // Update the button content based on the sidebar's state
     if (sidebar.classList.contains('collapsed')) {
-        toggleButton.textContent = '↦'; // Reverse symbol when collapsed
+        toggleButton.textContent = '↦';
     } else {
-        toggleButton.textContent = '↤'; // Normal symbol when expanded
+        toggleButton.textContent = '↤'; 
     }
 });
 
-// Create a single input row for adding products
 const inputRow = document.createElement('tr');
 inputRow.innerHTML = `
     <td><input type="text" name="product_name" placeholder="Product Name" required></td>
@@ -30,36 +27,32 @@ inputRow.innerHTML = `
     </td>
 `;
 tableBody.appendChild(inputRow);
-inputRow.style.display = 'none'; // Hide input row initially
+inputRow.style.display = 'none'; 
 
 addProductBtn.addEventListener('click', () => {
-    // Show the input row when the button is clicked
     if (!isEditing) {
-        inputRow.style.display = 'table-row'; // Display the input row
-        inputRow.querySelector('input[name="product_name"]').focus(); // Focus on the first input
-        isEditing = true; // Set editing flag
+        inputRow.style.display = 'table-row';
+        inputRow.querySelector('input[name="product_name"]').focus();
+        isEditing = true;
     } else {
         alert("Please save or cancel the current product before adding a new one.");
     }
 });
 
-// Add functionality to the 'Add' button inside the input row
 const saveBtn = inputRow.querySelector('.save-btn');
 saveBtn.addEventListener('click', function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
-    // Collect input data from the row
     const inputs = inputRow.querySelectorAll('input');
     const data = {
         product_name: inputs[0].value,
         product_category: inputs[1].value,
         product_stocks: inputs[2].value,
         product_price: inputs[3].value,
-        add_product: true // Indicate that this is an add product request
+        add_product: true
     };
 
-    // Send AJAX request to add the product
-    fetch('inventory.php', { // Use the current PHP file to handle the request
+    fetch('inventory.php', { 
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
@@ -69,7 +62,6 @@ saveBtn.addEventListener('click', function (event) {
     .then(response => response.json())
     .then(result => {
         if (result.status === 'success') {
-            // Create a new row for the added product
             const newRow = document.createElement('tr');
             newRow.innerHTML = `
                 <td>${data.product_name}</td>
@@ -79,8 +71,8 @@ saveBtn.addEventListener('click', function (event) {
                 <td><button class="edit-btn" data-id="${result.product_id}">Edit</button></td>
             `;
             tableBody.appendChild(newRow);
-            inputRow.style.display = 'none'; // Hide the input row again
-            isEditing = false; // Reset editing flag
+            inputRow.style.display = 'none';
+            isEditing = false; 
         } else {
             alert('Error adding product: ' + result.message);
         }
@@ -88,28 +80,24 @@ saveBtn.addEventListener('click', function (event) {
     .catch(error => console.error('Error:', error));
 });
 
-// Add functionality to the 'Cancel' button
 const cancelBtn = inputRow.querySelector('.cancel-btn');
 cancelBtn.addEventListener('click', function () {
-    inputRow.style.display = 'none'; // Hide the input row
-    isEditing = false; // Reset editing flag
+    inputRow.style.display = 'none';
+    isEditing = false;
 });
 
 document.addEventListener('click', function(event) {
     if (event.target.classList.contains('edit-btn')) {
-        const row = event.target.closest('tr'); // Get the current row
-        const cells = row.querySelectorAll('td'); // Get all the cells in the row
+        const row = event.target.closest('tr'); 
+        const cells = row.querySelectorAll('td');
 
-        // Get current product values from the row
         const currentName = cells[0].innerText;
         const currentCategory = cells[1].innerText;
         const currentStocks = cells[2].innerText;
         const currentPrice = cells[3].innerText;
 
-        // Get the product ID from data attribute
         const productId = event.target.getAttribute('data-id');
 
-        // Replace the row content with input fields for editing
         row.innerHTML = `
             <td><input type="text" name="edit_product_name" value="${currentName}" required></td>
             <td><input type="text" name="edit_product_category" value="${currentCategory}" required></td>
@@ -121,7 +109,6 @@ document.addEventListener('click', function(event) {
             </td>
         `;
 
-        // Add event listener for the Save button
         row.querySelector('.save-btn').addEventListener('click', function() {
             const updatedName = row.querySelector('input[name="edit_product_name"]').value;
             const updatedCategory = row.querySelector('input[name="edit_product_category"]').value;
@@ -134,11 +121,10 @@ document.addEventListener('click', function(event) {
                 product_category: updatedCategory,
                 product_stocks: updatedStocks,
                 product_price: updatedPrice,
-                update_product: true // Indicate this is an update request
+                update_product: true 
             };
 
-            // Send the updated data via fetch
-            fetch('inventory.php', { // Use the current PHP file to handle the request
+            fetch('inventory.php', { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -148,7 +134,6 @@ document.addEventListener('click', function(event) {
             .then(response => response.json())
             .then(result => {
                 if (result.status === 'success') {
-                    // Replace the input fields with updated values
                     row.innerHTML = `
                         <td>${updatedName}</td>
                         <td>${updatedCategory}</td>
@@ -163,9 +148,7 @@ document.addEventListener('click', function(event) {
             .catch(error => console.error('Error:', error));
         });
 
-        // Add event listener for the Cancel button
         row.querySelector('.cancel-btn').addEventListener('click', function() {
-            // Restore the original row content
             row.innerHTML = `
                 <td>${currentName}</td>
                 <td>${currentCategory}</td>
@@ -177,17 +160,15 @@ document.addEventListener('click', function(event) {
     }
 });
 
-// Fetch products on page load
 document.addEventListener('DOMContentLoaded', () => {
     fetchProducts();
 });
 
-// Function to fetch and display products
 function fetchProducts() {
-    fetch('fetch_products.php') // Assuming you have a separate PHP script to fetch products
+    fetch('fetch_products.php') 
         .then(response => response.json())
         .then(products => {
-            productRows.innerHTML = ''; // Clear existing rows
+            productRows.innerHTML = ''; 
             products.forEach(product => {
                 const row = document.createElement('tr');
                 row.innerHTML = `

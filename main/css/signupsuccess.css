@@ -15,17 +15,14 @@ body {
     padding: 40px 60px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     transform: scale(1);
-    transition: transform 0.3s ease; /* You can keep this if you want other transitions */
+    transition: transform 0.3s ease;
     position: relative;
 }
 
-/* Removed hover effect for success-message */
-
-/* Adjust the position of the top image to hang above the success message */
 .success-message .top-image {
     width: 352px;
     position: absolute;
-    top: -178px; /* Moves the image upwards above the box */
+    top: -178px; 
     left: 50%;
     transform: translateX(-50%);
 }
@@ -42,7 +39,7 @@ body {
     font-size: 36px;
     color: #2C3E50;
     margin-bottom: 20px;
-    margin-top: 60px; /* Adds space to account for the image above */
+    margin-top: 60px; 
     animation: slide-down 0.5s ease-in-out;
 }
 

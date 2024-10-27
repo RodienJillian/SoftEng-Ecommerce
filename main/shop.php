@@ -27,7 +27,7 @@ function fetchProductsByCategory($conn, $category) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cuddle Paws</title>
+    <title>Shop</title>
     <link rel="icon" href="https://res.cloudinary.com/dakq2u8n0/image/upload/v1726737021/logocuddlepaws_pcj2re.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
@@ -40,7 +40,7 @@ function fetchProductsByCategory($conn, $category) {
             <ul>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="shop.php">Shop</a></li>
-                <li><a href="cart.html">Cart</a></li>
+                <li><a href="cart.php">Cart</a></li>
                 <li><a href="index.php#about-us">About</a></li>
                 <li><a href="login.php">Log In/Sign Up</a></li>
             </ul>
