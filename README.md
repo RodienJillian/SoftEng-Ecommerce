@@ -6,6 +6,8 @@ Deployed Link: https://rodienjillian.github.io/SoftEng-Ecommerce/
 
 Data Dictionaru: https://docs.google.com/document/d/1jqgWDgl8bYcncLnvTooWo01a-c83Lg-xRxInjrDqM6E/edit?usp=sharing
 
+Presentation Slides: https://docs.google.com/presentation/d/16v_nUgIlMXX06YoBVZHAbH_FUJoPF0_YS0eJX4CIyyg/edit#slide=id.g54dda1946d_6_358
+
 > Take note lang, ang pinaka updated version is yung nasa folder na.
 >
 > Iprioritize natin now yung Cart
